@@ -1,5 +1,5 @@
 import React from 'react'
-import { FormControl, FormGroup , InputLabel,Input,Typography, Button ,styled } from '@mui/material'
+import { FormControl, FormGroup , InputLabel,Input,Typography, Button ,styled ,Box} from '@mui/material'
 import { useState } from 'react'
 import { getUserData ,editUser } from './Service/Api'
 import { useNavigate } from 'react-router-dom'
@@ -7,13 +7,22 @@ import { useEffect} from 'react'
 import { useParams } from 'react-router-dom'
 
 const Container = styled(FormGroup)`
-    width:50%;
-    margin: 5% auto 0 auto;
+    width:32%;
+    margin: 0 auto 0 auto;
+    padding-top:5%;
     & > div {
         margin-top: 20px;
     }
 `
-
+const Home= styled(Box)`
+        width: 100%;  
+        height: 92vh;
+        margin-down:5%;
+        background-image: url('https://img.freepik.com/free-photo/artistic-blurry-colorful-wallpaper-background_58702-8951.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover; 
+`
 
 const initialValue = {
     name:'',
@@ -47,14 +56,15 @@ function Edituser() {
 
 
     const getValue = async () => {
-         await editUser(id , value);
+         await editUser(value,id);
          navi('/all');
     }
 
   return (
+    <Home>
     <Container>
 
-        <Typography variant='h4'>Edit User</Typography>
+        <Typography variant='h4' style={{textAlign:'center',color:'black'}}>Edit User</Typography>
 
        <FormControl>
             <InputLabel>Name</InputLabel>
@@ -79,6 +89,7 @@ function Edituser() {
         <Button variant='contained' onClick={()=> getValue()}>Edit User</Button>
        </FormControl>
     </Container>
+    </Home>
   )
 }
 
