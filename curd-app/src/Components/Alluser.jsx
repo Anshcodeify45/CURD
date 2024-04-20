@@ -42,9 +42,11 @@ function Alluser() {
             getUsersDetails();
         },[]);
 
-        const getUsersDetails= async ()=>{
+        const getUsersDetails= async () => {
             let response =await getUsers();
+            console.log(response);
             setUser(response.data);
+            
         }
 
         const deleteUserdata = async(id) => {

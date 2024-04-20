@@ -6,7 +6,7 @@ const API_URL = 'http://localhost:3002/user';
 
 export const addUrl = async (data) => {
             try {
-               await axios.post(API_URL , data) 
+               await axios.post(API_URL , data)
             } catch (error) {
                 console.log("Error while catching data" , error.message)
             }

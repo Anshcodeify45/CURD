@@ -1,11 +1,25 @@
 {
   "user": [
     {
-      "id": "5969",
+      "id": "1",
       "name": "ASISH PATNAIK",
-      "username": "anishpatnaik@45",
-      "email": "asishpatnaik94@hotmail.com",
-      "phone": "7008814444"
+      "username": "asishpatnaik",
+      "email": "asish@gmail.com",
+      "phone": "1223345568"
+    },
+    {
+      "id": "92f4",
+      "name": "Kakashi Hatake",
+      "username": "kakashihatake",
+      "email": "kakashi@gmail.com",
+      "phone": "7412589630"
+    },
+    {
+      "id": "7dfd",
+      "name": "Sasuke Uchiha",
+      "username": "uchihasasuke",
+      "email": "sasuke@gmail.com",
+      "phone": "147539682"
     }
   ]
 }
